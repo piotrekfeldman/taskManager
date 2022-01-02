@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href='../static/style.css' th:href="@{style.css}">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+<div class="container-xxl" id="banner">
+    <h1 th:text="|Edycja zadania o nazwie ${task.name}"> Edycja zadania</h1>
+</div>
+<div class="container-xxl" id="tasksmodify">
+    <form action="/edit" method="post" th:object="${task}">
+        <input type="hidden" th:field="*{id}"/>
+        <h2>Edytuj zadanie</h2>
+        <div class="row">
+            <div class="col">
+                <input type="text" th:field="*{name}" class="form-control" placeholder="Nazwa zadania">
+            </div>
+            <div class="form-group">
+                <br>
+                <label for="exampleFormControlTextarea1">Opis zadania</label>
+                <textarea class="form-control" th:field="${task.description}" id="exampleFormControlTextarea1"
+                          rows="3"></textarea>
+            </div>
+        </div>
+        <br>
+        <div class="buttons">
+            <button type="submit" class="btn btn-primary">Zapisz zmiany!</button>
+            <a href="/">
+                <button type="submit" class="btn btn-primary btn-cancel">Anuluj</button>
+            </a>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
