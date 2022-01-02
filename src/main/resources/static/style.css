@@ -1,0 +1,57 @@
+a {
+    color: black;
+    font-size: 18px;
+    font-style: normal;
+    text-decoration: none;
+}
+
+#banner {
+    background: black;
+    opacity: 50%;
+    color: red;
+}
+
+body {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5px;
+}
+
+#link {
+    display: none;
+}
+
+.submit {
+
+    display: inline-grid;
+}
+
+.addButton {
+    width: auto;
+}
+
+#tasksmodify {
+    padding: 2px;
+    background: white;
+    opacity: 85%;
+
+}
+
+.nav-item {
+    margin-right: 5%
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+#tasks {
+    background: white;
+    opacity: 70%;
+}
+
+body {
+    background-image: url("images/bricks_wall.jpeg");
+    background-size: cover;
+}
